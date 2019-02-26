@@ -1,1 +1,7 @@
 .DS_Store
+*.*~
+*.out
+*.output
+*.tab.c
+*.tab.h
+*.yy.c
