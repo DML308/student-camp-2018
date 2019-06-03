@@ -1,16 +1,15 @@
-# 2018 DML308多核组新生学习
->该初版目录参考自[华科冰岩作坊](https://github.com/lxx2013/summer-camp-2018/blob/master/README.md)
+# 2019 DML308多核组新生学习
 
 ## 📖 总进度表
 
 | 学　员 |  1|2|3|4|5|6|7  |
 |:----: |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| 黄业兴 | √ |√|√|√|√| |√|  
-| 李　妍 | √ |√|√|√|√| |√|  
-| 李雅兰 | √ |√|√|√|√| |√|  
-| 张培基 | √ |√|√|√|√| |√|  
+|  |  ||||| ||  
+|  |  ||||| ||  
+|  |  ||||| ||  
+|  |  ||||| ||  
 
-欢迎你来到多核组 2018 Git冬令营！
+欢迎你在2019年来到多核组!
 
 在开始之前，你需要知道的是：
 
@@ -20,20 +19,17 @@
 
 初始项目架构：
 
-- student-camp-2018
-  - Huang（黄业兴）
+- student-camp-2019
+  - StudentName
     - Notes（空）
     - Tasks（空）
     - README.md（进度表）
-  - Yan（李妍）
-  - Yaerlan（李雅兰）
-  - Zhang (张培基)
   - README.md
   - .gitignore
 
 目标项目架构：
 
-- student-camp-2018
+- student-camp-2019
   - 你的文件夹
     - Notes
       - git.md
@@ -45,16 +41,6 @@
   - README.md（进度表）
   - .gitignore
 
-可能的师兄师姐分配(大约2019年初前指定)
-
-|  学员  |  指定  |
-|:----: | :----: |
-| 黄业兴 | 待定 |
-| 李　妍 | 待定 |
-| 李雅兰 |  待定 |
-| 张培基 | 待定 |
-
-
 ### 新手大礼包
 
 |         工具          |                 说明                  |
@@ -63,7 +49,7 @@
 |      学生大礼包         | https://github.com/ivmm/Student-resources |
 | Github Education Pack |     https://education.github.com/pack     |
 | 任意输入法 | 要求项目内全部使用`utf-8`编码<br>标点符号使用英文标点(半角) |
-| `wox` / `bitwise` / `cmder`| [实验室软件推荐列表/未来由你们更新](https://cn.costream.site/guide/link_software.html) |
+| `wox` / `bitwise` / `cmder`| [实验室软件推荐列表/未来由你们更新](https://cn.costream.org/guide/link_software.html) |
 
 ## 接下来让我们开始紧张刺激的 `7` 层关卡挑战吧 ~~ Link Start ！！
 
@@ -79,7 +65,7 @@
 
 1. 创建并拥有一个 github 账号
 2. 了解并掌握 git 基本操作
-3. Fork 并 Clone `student-camp-2018` 仓库
+3. Fork 并 Clone `student-camp-2019` 仓库
 4. 要求把过程中学到的新知识写入`你的文件夹/Notes`,包括后续任务进程中也是如此
 
 #### 考核指标
@@ -103,7 +89,7 @@
 2. 能愉快的对代码进行版本控制与管理了！
 
 #### 参考资料
-[本实验室发布的 Git 使用简明教程](https://cn.costream.site/guide/MD_GIT.html) *熟练使用后可以大胆参与完善该文档*
+[本实验室发布的 Git 使用简明教程](https://cn.costream.org/guide/MD_GIT.html) *熟练使用后可以大胆参与完善该文档*
 
 [廖雪峰的 Git 教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
@@ -124,7 +110,7 @@
     - markdown 常用字符:<br>列出文本中最常用的`mardown`风格标签, 至少5个
     - 修改任务1中你的`git.md`或`git.md.txt`文件, 运用刚学到的 markdown 规则来美化排版
     - 在上一步自己`fork`的文件夹内把内容修改完毕后提交 Pull Request 到主目录.
-    - 简单了解什么是 Issue , 然后在[Issue7](https://github.com/DML308/student-camp-2018/issues/7)中列出自己接下来的任务&deadline
+    - 了解什么是 Issue
 
 关键词：markdown、typora、简书、插件
 
@@ -166,7 +152,6 @@
 #### 参考资料
 
 - [lantern](https://github.com/getlantern/download) *比较贵,不推荐*
-- [SetupVpn]()  **请张同学以 markdown 的格式把链接附在这里**
 - [shadowsocks](https://shadowsocks.com/) 可以几个人合买一个服务器来配置代理
 
 ## 4. 挑选一个适合自己的编辑器
@@ -212,7 +197,7 @@
 1. 复习 git 相关操作, 完善自己的`Notes/git.md`,指令内容按照自己实际用过的来写,优先写使用频率高的.
    - 思考这样一个问题, 如果github被墙了或者校园网访问网速特别慢,怎么办?例如,clone我们的COStream到服务器时,明明是约`40M`B的文件包却只有不到`100Kb/s`的速度.
    - 了解`git push -u origin master`中的`origin`指的是什么. 可通过`git remote -v`来列出信息. 如果能体验一下`code.aliyun.com`或`gitee.com`或`GitLab`相信你会有更清楚的理解.
-2. 在`cn.costream.site`和`costream.site`的`dev 分支`中提交`Pull Request`来修改自己的个人名片
+2. 在`cn.costream.org`和`costream.org`的`dev 分支`中提交`Pull Request`来修改自己的个人名片
    - 很高兴看到你们已经练习了多次PR的使用, 考虑到这次只需修改一个文件,在网页上操作即可,无需clone到本地)
 
 关键词：多人协作
@@ -278,7 +263,7 @@
 
 3. 可参考`DML308/COStreamPP`中的`src/config`中的词法分析和语法分析文件
 
-4. 关于这个任务的讨论和代码分享, 我们集中在[Issue #16](https://github.com/DML308/student-camp-2018/issues/16)中讨论.
+4. 关于这个任务的讨论和代码分享, 我们集中在[Issue #16](https://github.com/DML308/student-camp-2019/issues/16)中讨论.
 
 >代码中禁止直接复制/粘贴的抄袭,也没必要做愚蠢的变量名替换.抄袭与否的判断标准以 commits 时间纪录为准. 如果摸鱼半个月然后一天提交500行代码, 鬼才会相信是你自己写的.
 
@@ -302,7 +287,7 @@
 
 #### 任务位置
 
-`https://github.com/DML308/student-camp-2018/你的文件夹/Tasks/`
+`https://github.com/DML308/student-camp-2019/你的文件夹/Tasks/`
 
 #### 任务奖励
 
