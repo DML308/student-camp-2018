@@ -15,7 +15,7 @@
    * git rm -f 强制删除文件，不检查更新  
    * git rm --cached 删除暂存区的文件  
 7. git mv  
-   *git mv oldname newname 重命名文件  
+   * git mv oldname newname 重命名文件  
    * git mv file dir 移动文件到指定的目录  
 8. git branch 查看所有分支  
 9. git pull 将指定远程仓库的指定分支拉取到本地仓库分支  
