@@ -14,8 +14,6 @@
 * 水平线：-----  
 ---  
 * 超链接：\[描述文字\]\(超链接地址\)：[百度](http://www.baidu.com)  
-* 代码：\'代码内容\'  
-'int a = 3;'  
 * 图片：\!\[图片说明\]\(图片地址\)  
 ![邓伦](https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1565173218&di=72b1f761674d74b5ab9fee7229fd2b2f&src=http://pic1.win4000.com/pic/b/cb/abfa1446708.jpg)  
 * 表格：  
