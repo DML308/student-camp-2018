@@ -111,7 +111,7 @@
 
 #### 考核指标
 - 创建`你的文件夹/Notes/markdown.md`文件,在其中写入以下内容
-    - markdown 常用字符:<br>列出文本中最常用的`mardown`风格标签, 至少5个
+    - markdown 常用字符:<br>列出文本中最常用的`markdown`风格标签, 至少5个
     - 修改任务1中你的`git.md`或`git.md.txt`文件, 运用刚学到的 markdown 规则来美化排版
     - 在上一步自己`fork`的文件夹内把内容修改完毕后提交 Pull Request 到主目录.
     - 了解什么是 Issue
