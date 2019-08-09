@@ -16,7 +16,17 @@ Markdown syntax 2:
 ### Class II
 example: 
 ## 中国共产党中央委员会
+Markdown syntax:  
+\## 中国共产党中央委员会  
+### Class III
+example: 
 ### 中国共产党湖北省委员会
+Markdown syntax:  
+\### 中国共产党湖北省委员会  
+### Class IV
+example:
 #### 中国共产党武汉市委员会
+Markdown syntax:  
+\#### 中国共产党武汉市委员会  
 ##### 中国共产党武汉市洪山区委员会
 ###### 中国共产党武汉市洪山区关上街道办事处委员会
