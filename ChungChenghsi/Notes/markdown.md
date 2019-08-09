@@ -6,30 +6,31 @@ Since the initial description of Markdown contained ambiguities and unanswered q
 ---
 [click to Markdown Tutorial](https://www.markdowntutorial.com/)
 ## Heading
-First level heading's example as follow:  
+To make headers in Markdown, you preface the phrase with a hash mark (#). You place the same number of hash marks as the size of the header you want. For example, for a header one, you'd use one hash mark (# Header One), while for a header three, you'd use three (### Header Three)
+Here is header one:  
 # 中国共产党全国代表大会
 Markdown syntax 1:  
 \# 中国共产党全国代表大会  
 Markdown syntax 2:  
 中国共产党全国代表大会  
 \====  
-Second level heading's example as follow:  
+Here is header two:  
 ## 中国共产党中央委员会
 Markdown syntax:  
 \## 中国共产党中央委员会  
-Third level heading's example as follow: 
+Here is header three: 
 ### 中国共产党湖北省委员会
 Markdown syntax:  
 \### 中国共产党湖北省委员会  
-Fourth level heading's example as follow:
+Here is header four:
 #### 中国共产党武汉市委员会
 Markdown syntax:  
 \#### 中国共产党武汉市委员会  
-Fifth level heading's example as follow:
+Here is header five:
 ##### 中国共产党武汉市洪山区委员会
 Markdown syntax:  
 \##### 中国共产党武汉市洪山区委员会  
-Sixth level heading's example as follow:
+Here is header six:
 ###### 中国共产党武汉市洪山区关上街道办事处委员会
 Markdown syntax:  
 \###### 中国共产党武汉市洪山区关上街道办事处委员会  
