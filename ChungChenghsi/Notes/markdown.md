@@ -13,8 +13,11 @@ Since the initial description of Markdown contained ambiguities and unanswered q
 # 中国共产党全国代表大会
 
 Markdown syntax:
+
 \# 中国共产党全国代表大会
+
 or
+
 中国共产党全国代表大会
 \====
 
