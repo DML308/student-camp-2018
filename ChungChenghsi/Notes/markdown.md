@@ -9,5 +9,6 @@ Since the initial description of Markdown contained ambiguities and unanswered q
 ### Title
 
 | Text using Markdown syntax | Text viewed in a browser |
+|:----: |:-:|
 | 中国共产党 | 中国共产党 |
 | === | === |
