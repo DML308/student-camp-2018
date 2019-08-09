@@ -5,5 +5,5 @@ git pull  更新本地库
 系统用户级别签名设置方式
 git config --global user.name "jane.ubuntu"
 git config --global user.email "sg@154975@163.com"
-
+pull request 提交代码merge请求,请求进行代码合并
 
