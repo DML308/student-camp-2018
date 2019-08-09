@@ -1,4 +1,4 @@
-#Basic Git commands
+##Basic Git commands
 
 *git init
 initializes a brand new Git repository and begins tracking an existing directory. It adds a hidden subfolder within the existing directory that houses the internal data structure required for version control.
