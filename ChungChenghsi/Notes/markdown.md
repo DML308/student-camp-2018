@@ -4,8 +4,8 @@ Markdown is a lightweight markup language with plain text formatting syntax. Its
 Since the initial description of Markdown contained ambiguities and unanswered questions, the implementations that appeared over the years have subtle differences and many come with syntax extensions.
 # USAGE
 ---
-[click to Markdown Tutorial](https://www.markdowntutorial.com/)
-## Heading
+[clicking to Markdown Tutorial](https://www.markdowntutorial.com/) can get systematic learning about Markdown.
+### Heading
 To make headers in Markdown, you preface the phrase with a hash mark (#). You place the same number of hash marks as the size of the header you want. For example, for a header one, you'd use one hash mark (# Header One), while for a header three, you'd use three (### Header Three)
 Here is header one:  
 # 中国共产党全国代表大会
@@ -34,3 +34,7 @@ Here is header six:
 ###### 中国共产党武汉市洪山区关上街道办事处委员会
 Markdown syntax:  
 \###### 中国共产党武汉市洪山区关上街道办事处委员会  
+
+### Bold
+
+留着慢慢写....
