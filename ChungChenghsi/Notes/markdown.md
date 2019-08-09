@@ -8,11 +8,15 @@ Since the initial description of Markdown contained ambiguities and unanswered q
 
 ### Title
 
-#### 一级标题
+#### Class I
 
 # 中国共产党全国代表大会
 
+Markdown syntax:
 \# 中国共产党全国代表大会
+or
+中国共产党全国代表大会
+\====
 
 ## 中国共产党中央委员会
 ### 中国共产党湖北省委员会
