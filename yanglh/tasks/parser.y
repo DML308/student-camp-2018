@@ -1,13 +1,34 @@
 %{
 #include<stdio.h>
 #include<math.h>
-#define YYSTYPE double
+void yyerror(const char *s);
+int main();
 %}
 
-%left '|'
-%left '&'
-%left '+' '-'
-%left '*' '/'
-%right '^'
+%token ADD SUB MUL DIV AND OR NOT OP CP NUMBER
+
+%left OR
+%left AND
+%left ADD SUB
+%left MUL DIV
+%right NOT
 %right UMINUS
 %%
+
+lines : lines expr '\n' {printf("answer = %d\n",$2);}
+      | /* empty */ {/* empty */}
+      ;
+expr : expr ADD expr {$$=$1+$3;}
+     | expr SUB expr {$$=$1-$3;}
+     | expr MUL expr {$$=$1*$3;}
+     | expr DIV expr {$$=$1/$3;}
+     | NUMBER {$$=$1;}
+     ;
+
+%%
+void yyerror(const char *s){
+     printf("%s\n",s);
+}
+int main(){
+    return yyparse();
+}
