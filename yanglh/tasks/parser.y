@@ -3,13 +3,13 @@
 #include<math.h>
 #include<string.h>
 #include<stdlib.h>
-#include"main.h"
 #include"y.tab.h"
 
 extern double value[100];
 extern int set[100];
 
 extern int yylex(void);
+extern void yyterminate();
 extern void yyerror(const char* s);
 extern FILE* yyin;
 %}
@@ -20,11 +20,11 @@ extern FILE* yyin;
     double number;
 }
 %token<number> ADD SUB MUL DIV AND OR NOT OP CP NUMBER KEYWORD_VAR EOL
-%token<number> program
-%token<number> line
-%token<number> calc
-%token<number> expr
-%token<number> assignment
+%type<number> program
+%type<number> line
+%type<number> calc
+%type<number> expr
+%type<number> assignment
 %token<index> VARIABLE
 
 %left OR
@@ -53,11 +53,11 @@ expr : expr ADD expr {$$=$1+$3;}
      | NUMBER {$$=$1;}
      | VARIABLE {$$=value[$1];}
      ;
-assignment : KRYWORD_VAR VARIABLE "=" calc {$$=set($2,$4);}
+assignment : KRYWORD_VAR VARIABLE "=" calc {$$=setValue($2,$4);}
            ;
 %%
-int main(){
-    char* string;
+int main(int argc,char** argv){
+    char string[25];
     printf("whether to read the file? (Y/N):");
     scanf("%s",string);
     if(strcmp(string,"Y")==0 || strcmp(string,"y")==0){
@@ -70,7 +70,7 @@ int main(){
         }
         yyparse();
     }
-    else {
+    else {  //从命令行输入
         yyin = stdin;
         yyparse();
     }

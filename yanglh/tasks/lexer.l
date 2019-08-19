@@ -1,6 +1,6 @@
 %{
 #include<stdlib.h>
-#include<iostream>
+#include<stdio.h>
 #include<string.h>
 #include"y.tab.h"
 #include"main.h"
@@ -17,7 +17,7 @@ number {digits}(\.{digits})?
 variable [a-zA-Z]+
 
 %%
-[\t] {}
+[\t]
 "+" {return ADD;}
 "-" {return SUB;}
 "*" {return MUL;}
@@ -27,14 +27,13 @@ variable [a-zA-Z]+
 "!" {return NOT;}
 "(" {return OP;}
 ")" {return CP;}
-"\n" {return yytext[0];}
 {number} {yylval=atof(yytext);
           return NUMBER;}
 ("var")|("VAR") {return KEYWORD_VAR;}
 [\n] {return EOL;}
 . {yyerror("Undefined Symbol!");exit(1);}
 %%
-
+/*
 int yywrap(void){
     return 1;
-}
+}*/

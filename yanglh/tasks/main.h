@@ -15,11 +15,11 @@ int add(char* name){
         }
     }
     count++;
-    name[i] = strdup(name);
+    names[i] = strdup(name);
     return i;
 }
 //设置变量值
-int set(int index,double variable){
+int setValue(int index,double variable){
     value[index] = variable;
     set[index] = 1;
     return variable;
