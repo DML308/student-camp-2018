@@ -25,8 +25,8 @@ variable [a-zA-Z]+
 "*" {return MUL;}
 "/" {return DIV;}
 "=" {return EQUAL;}
-"&&" {return AND;}
-"||" {return OR;}
+"&" {return AND;}
+"|" {return OR;}
 "!" {return NOT;}
 "(" {return OP;}
 ")" {return CP;}
