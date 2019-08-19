@@ -27,9 +27,10 @@ variable [a-zA-Z]+
 "!" {return NOT;}
 "(" {return OP;}
 ")" {return CP;}
-{number} {yylval=atof(yytext);
+{number} {yylval.number=atof(yytext);
           return NUMBER;}
 ("var")|("VAR") {return KEYWORD_VAR;}
+{variable} {yylval.index=add(yytext);return VARIABLE;}
 [\n] {return EOL;}
 . {yyerror("Undefined Symbol!");exit(1);}
 %%

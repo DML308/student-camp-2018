@@ -10,7 +10,7 @@ extern int set[100];
 
 extern int yylex(void);
 extern void yyterminate();
-extern void yyerror(const char* s);
+void yyerror(const char* s);
 extern FILE* yyin;
 %}
 
@@ -38,7 +38,7 @@ program :
         | program line
         ;
 line : EOL {printf("Pleas enter:\n");}
-     | calc EOL {printf("answer = %d\n",$1);}
+     | calc EOL {printf("answer = %f\n",$1);}
      ;
 calc : expr
      | assignment
@@ -53,8 +53,9 @@ expr : expr ADD expr {$$=$1+$3;}
      | NUMBER {$$=$1;}
      | VARIABLE {$$=value[$1];}
      ;
-assignment : KRYWORD_VAR VARIABLE "=" calc {$$=setValue($2,$4);}
+assignment : KEYWORD_VAR VARIABLE "=" calc {$$=setValue($2,$4);}
            ;
+
 %%
 int main(int argc,char** argv){
     char string[25];
