@@ -19,7 +19,7 @@ extern FILE* yyin;
     int index;
     double number;
 }
-%token<number> ADD SUB MUL DIV AND OR NOT OP CP NUMBER KEYWORD_VAR EOL
+%token<number> ADD SUB MUL DIV AND OR NOT OP CP EQUAL NUMBER KEYWORD EOL
 %type<number> program
 %type<number> line
 %type<number> calc
@@ -53,7 +53,7 @@ expr : expr ADD expr {$$=$1+$3;}
      | NUMBER {$$=$1;}
      | VARIABLE {$$=value[$1];}
      ;
-assignment : KEYWORD_VAR VARIABLE "=" calc {$$=setValue($2,$4);}
+assignment : KEYWORD VARIABLE EQUAL calc {$$=setValue($2,$4);}
            ;
 
 %%
@@ -70,6 +70,7 @@ int main(int argc,char** argv){
             exit(-1);
         }
         yyparse();
+        printf("over");
     }
     else {  //从命令行输入
         yyin = stdin;

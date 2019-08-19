@@ -18,19 +18,19 @@ number {digits}(\.{digits})?
 variable [a-zA-Z]+
 
 %%
-[\t]
+[ \t]
+{number} {yylval.number=atof(yytext);return NUMBER;}
 "+" {return ADD;}
 "-" {return SUB;}
 "*" {return MUL;}
 "/" {return DIV;}
+"=" {return EQUAL;}
 "&&" {return AND;}
 "||" {return OR;}
 "!" {return NOT;}
 "(" {return OP;}
 ")" {return CP;}
-{number} {yylval.number=atof(yytext);
-          return NUMBER;}
-("var")|("VAR") {return KEYWORD_VAR;}
+("int")|("double") {return KEYWORD;}
 {variable} {yylval.index=add(yytext);return VARIABLE;}
 [\n] {return EOL;}
 . {yyerror("Undefined Symbol!");exit(1);}

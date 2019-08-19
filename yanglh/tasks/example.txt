@@ -1,5 +1,6 @@
 (4+2)*9
-VAR x=10
+int x=10
 x*3
-VAR y=55
-VAR z=x+y
+int y=55
+int z=x+y
+
