@@ -2,7 +2,7 @@
 #define MAIN_H
 
 char* names[100];
-ine set[100];
+int set[100];
 int count = 0;
 double value[100];
 
