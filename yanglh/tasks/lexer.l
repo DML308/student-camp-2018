@@ -1,18 +1,23 @@
 %{
-#include"y.tab.h"
 #include<stdlib.h>
+#include<iostream>
+#include<string.h>
+#include"y.tab.h"
+#include"main.h"
 %}
 
-/* 定义数字 */
+/* 当扫描器遇到end-of-file时，不会调用yywrap()，简单的假定没有更多的文件可以扫描 */
+%option noyywrap
+
+/* 定义数字和字母 */
 digit [0-9]
 digits {digit}+
 number {digits}(\.{digits})?
 /* (E[+-]?digits)? */
-
-/* 当扫描器遇到end-of file时，不会调用yywrap()，简单的假定没有更多的文件可以扫描 */
-/* %option noyywrap */
+variable [a-zA-Z]+
 
 %%
+[\t] {}
 "+" {return ADD;}
 "-" {return SUB;}
 "*" {return MUL;}
@@ -25,6 +30,9 @@ number {digits}(\.{digits})?
 "\n" {return yytext[0];}
 {number} {yylval=atof(yytext);
           return NUMBER;}
+("var")|("VAR") {return KEYWORD_VAR;}
+[\n] {return EOL;}
+. {yyerror("Undefined Symbol!");exit(1);}
 %%
 
 int yywrap(void){
