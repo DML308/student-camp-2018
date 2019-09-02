@@ -1,0 +1,23 @@
+## 9.2对策
+
+### ipaddress.com
+
+[ipaddress.com](https://www.ipaddress.com)可查询ip地址
+查询以下三个网址的对应地址
+github.com
+assets-cdn.github.com
+github.global.ssl.fastly.net
+
+### 修改hosts
+
+在hosts加入以下内容
+140.82.114.3    github.com
+185.199.108.153 assets-cdn.github.com
+185.199.109.153 assets-cdn.github.com
+185.199.110.153 assets-cdn.github.com
+185.199.111.153 assets-cdn.github.com
+151.101.185.194 github.global.ssl.fastly.net
+
+cmd 执行 "ipconfig/flushdns" 以刷新本地dns
+
+### 搭个梯子（提上日程）
