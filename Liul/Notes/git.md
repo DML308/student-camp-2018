@@ -1,5 +1,5 @@
-1.git add  把工作区的修改，提交到暂存区(在版本库里的stage)
-2.git commit 把暂存区的修改，保存到当前分支(版本库里的master)  
+1.git add  把工作区的修改，提交到暂存区
+2.git commit 把暂存区的修改，保存到当前分支
 3.git push  把本地库的记录，推送到远程库
 4.git status 查看状态
 5.git log 查看日志
