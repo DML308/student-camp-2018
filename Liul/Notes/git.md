@@ -9,4 +9,7 @@ working directory  工作区  比如learngit这个文件夹就是一个工作区
 Repository 版本库   是工作区里面隐藏的那个目录.git ，其中又分暂存区stage 和 当前分支master
 git checkout -- <file> 用版本库里的版本替换工作区里的版本
 git clone git@github.com:leeleezi/student-camp-2019 克隆远程仓库到本地
-111
+
+
+什么是Pull Request？
+fork了作者的远程库，自己作了一些改动，想请求作者合并这些改动
