@@ -1,37 +1,27 @@
- /* 
-  * 词法分析器
-  */
-
 %{
-
-
-
+#include <stdio.h>
+#include "praser.tab.h"
 %}
 
- /* 
-  * 正则表达式定义
-  */
-letter [a-zA-Z]+
+letter [a-zA-Z]
+digit [0-9]
+identifier ^[letter_](letter|digit|_)*
+number -?[digit]*(\.)?[digit]*
 
 %%
-
- /* 
-  * 规则 
-  * 数字 
-  * 变量名  可以是 数字字母和下划线
-  * 空白  换行符
-  * 逻辑符号  && || ~ 
-  */
 "+"  {return ADD;}
 "-"  {return SUB;}
 "*"  {return MUL;}
 "/"  {return DIV;} 
 "&&" {return AND;}
 "||" {return OR;}
-"~"  {return NOT;}
-{letter}	{return VAR;}
+"!"  {return NOT;}
+"(" {return LP;}
+")" {return RP;}
+{identifier}	{yylval.index = add(yytext);return VAR;}
+{number}        {yylval = atod(yytext);return NUM;}
 \n	{return EOL;}
-[ \t]   { /*忽略空白*/ }
-.  yyerror("无效的输入字符");
+[ \t]+   {}
+.   yyerror("不支持的字符");
 %%
 
