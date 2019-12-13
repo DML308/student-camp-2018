@@ -1,12 +1,13 @@
 %{
-#include <stdio.h>
-#include "praser.tab.h"
+#include "parser.tab.h"
+#include <stdlib.h>
 %}
+%option noyywrap
 
 letter [a-zA-Z]
 digit [0-9]
 identifier ^[letter_](letter|digit|_)*
-number -?[digit]*(\.)?[digit]*
+number {digit}+(\.{digit}+)?(E[+-]{digit}+)?
 
 %%
 "+"  {return ADD;}
@@ -18,10 +19,11 @@ number -?[digit]*(\.)?[digit]*
 "!"  {return NOT;}
 "(" {return LP;}
 ")" {return RP;}
-{identifier}	{yylval.index = add(yytext);return VAR;}
-{number}        {yylval = atod(yytext);return NUM;}
+"=" {return EQU;}
+{number}        {yylval = atol(yytext);return NUM;}
+{identifier}	{return VAR;}
 \n	{return EOL;}
 [ \t]+   {}
-.   yyerror("不支持的字符");
+.   {}
 %%
 
