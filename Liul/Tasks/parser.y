@@ -1,9 +1,11 @@
 %{
-# include <stdio.h>
-int yylex();
+#include <stdio.h>
+int yylex(void);
+extern void yyerror(const char *msg);
+extern FILE *yyin;
 %}
 
-%token VAR NUM ADD SUB MUL DIV AND OR NOT LP RP EOL
+%token VAR NUM ADD SUB MUL DIV AND OR NOT LP RP EOL EQU
 
 %left OR
 %left AND 
@@ -16,11 +18,10 @@ program :
     | program line
     ;
 line : 
-    | EOL 
-    | decl EOL      
-    | calc EOL       {printf("%d\n",$1);}
+    | EOL      
+    | expr EOL       {printf("%d\n",$1);}
     ;
-calc : expr ADD expr {$$ = $1 + $3;}
+expr : expr ADD expr {$$ = $1 + $3;}
      | expr SUB expr {$$ = $1 - $3;}
      | expr MUL expr {$$ = $1 * $3;}
      | expr DIV expr {$$ = $1 / $3;}
@@ -31,13 +32,21 @@ calc : expr ADD expr {$$ = $1 + $3;}
      | SUB expr      {$$ = -$2;}
      | NUM           {$$ = $1;}
      | VAR           {$$ = $1;}
-decl : 
+     ;
 %%
-int main(int argc,char **argv)
+/*int main(int argc, char** argv)
 {
- yyparse();
- return 0;
-}
-void yyerror (const char *msg) {
+	if(argc > 1)
+	{
+		yyin = fopen(argv[1],"r");	
+	}
+	else
+	{
+		yyin = stdin;
+	} 
+	yyparse();
+	return 0;
+}*/
+void yyerror (const char * msg) {
     printf("%s\n",msg);
 }
